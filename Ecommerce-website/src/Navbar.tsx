@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
     return (
       <>
         <nav className="fixed top-0 left-0 right-0 w-full border-b border-green-400 h-24 flex flex-row items-center justify-between px-36 gap-16">
             <div>
+              <Link to="/">
                 <h1 className="flex items-center justify-center bg-gradient-to-r from-green-400 to-green-900 text-gray-150 
         text-2xl font-bold shadow-lg rounded-xl hover:scale-105 transition-transform duration-300
                 w-32 h-16 text-center align-middle">Talipify</h1>
+              </Link>
             </div>
             <div className="w-full">
                 <input
@@ -15,7 +19,11 @@ function Navbar() {
                 />
             </div>
             <div>
-                <p className="text-green-800">cart</p>
+            <Link to="/signup">
+              <button className="w-32 h-16 bg-green-600 text-white text-lg font-bold rounded-xl shadow-lg hover:bg-green-700 hover:scale-105 transition-transform duration-300">
+                Sign In
+              </button>
+            </Link>
             </div>
         </nav>
       </>
