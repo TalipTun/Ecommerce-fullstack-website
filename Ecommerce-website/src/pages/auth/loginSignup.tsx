@@ -10,14 +10,14 @@ function LoginSignup() {
       <>
         <Navbar />
 
-        <div className="container">
+        <div className="flex flex-col bg-white pb-30 border-blue-900 border-8 w-150">
 
-          <div className="header">
-            <div className="text">Sign up</div>
-            <div className="underline"></div>
+          <div className="flex flex-col justify-center gap-9 w-100% mt-30">
+            <div className="text-purple-700 text-6xl font-bold">Sign up</div>
+            <div className="w-61 h-2 bg-black rounded-[9px]"></div>
           </div>
 
-          <div className="inputs">
+          <div className="mt-55 flex flex-col gap-25">
 
             <div className="input">
               <img src={user_icon} alt="" />
