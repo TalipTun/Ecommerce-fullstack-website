@@ -1,5 +1,5 @@
-import './App.css'
-import {getItems} from "./api.ts"
+import './css/App.css'
+import {getItems} from "./components/api.ts"
 import { useEffect } from "react";  // Import React and useEffect
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home.tsx"; // Your main page
