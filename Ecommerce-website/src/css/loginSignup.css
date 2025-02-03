@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centers vertically */
+    background: #eaeaea;
+    padding-left: 15px;
+    height: 60px;
+    border-radius: 2px;
+}
+
+.input_text {
+    width: 100%;
+    margin-left: 10px;
+    outline: none;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+}
