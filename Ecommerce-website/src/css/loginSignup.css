@@ -25,4 +25,10 @@
     border-radius: 30px;
     width: 200px;
     height: 40px;
+    cursor: pointer;
+}
+
+.gray {
+    background: #EAEAEA;
+    color: #676767;
 }
