@@ -3,11 +3,20 @@ import "../../css/loginSignup.css"
 import user_icon from './Assets/person.png' 
 import email_icon from './Assets/email.png' 
 import password_icon from './Assets/password.png' 
-import { useState } from "react"
+import {useEffect, useRef, useState} from "react"
 
 
 function LoginSignup() {
-    const [action, setAction] = useState("Sign up");
+    const [name, setName] = useState('');
+    const nameRef = useRef<HTMLInputElement>(null);
+
+    const handleNameChange = () => {
+      setName(nameRef.current?.value || '');
+    }
+
+    useEffect(() => {
+      console.log("Name: " + name),
+    [name]})
 
     return (
       <>
@@ -16,15 +25,21 @@ function LoginSignup() {
             <div className="flex flex-col bg-white w-125 pl-15 pr-15 pt-5 pb-5 h-150 rounded-2xl">
 
               <div className="flex flex-col justify-center items-center gap-5 w-100%">
-                <div className="text-purple-700 text-6xl font-bold">{action}</div>
+                <div className="text-purple-700 text-6xl font-bold">Register</div>
                 <div className="w-20 h-1 bg-purple-700 rounded-[9px]"></div>
               </div>
 
               <div className="mt-15 flex flex-col gap-5">
-                {action === "Log in" ? <div></div> : <div className="input">
+                <div className="input">
                   <img src={user_icon} alt="" />
-                  <input type="text" className="input_text" placeholder="name"/>
-                </div>}
+                  <input 
+                    type="text" 
+                    className="input_text" 
+                    placeholder="name"
+                    ref={nameRef}
+                    onChange={handleNameChange}
+                    />
+                </div>
 
                 <div className="input">
                   <img src={email_icon} alt="" />
@@ -41,8 +56,7 @@ function LoginSignup() {
                 </div>
 
                 <div className="flex flex-row gap-10 justify-center items-center mt-3">
-                  <div className={action === "Log in" ? "submit gray" : "submit"} onClick={() => {setAction("Sign up")}}>Sign up</div>
-                  <div className={action === "Sign up" ? "submit gray" : "submit"}  onClick={() => {setAction("Log in")}}>Login</div>
+                  <div className="submit" >Register</div>
                 </div>
               </div>
             </div>
