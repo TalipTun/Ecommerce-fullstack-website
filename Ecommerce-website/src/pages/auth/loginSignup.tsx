@@ -15,7 +15,7 @@ function LoginSignup() {
     }
 
     useEffect(() => {
-      console.log("Name: " + name),
+      console.log("Name is: " + name),
     [name]})
 
     return (
@@ -23,7 +23,6 @@ function LoginSignup() {
         <Navbar />
           <div className="pt-32 flex justify-center h-screen bg-amber-400">
             <div className="flex flex-col bg-white w-125 pl-15 pr-15 pt-5 pb-5 h-150 rounded-2xl">
-
               <div className="flex flex-col justify-center items-center gap-5 w-100%">
                 <div className="text-purple-700 text-6xl font-bold">Register</div>
                 <div className="w-20 h-1 bg-purple-700 rounded-[9px]"></div>
