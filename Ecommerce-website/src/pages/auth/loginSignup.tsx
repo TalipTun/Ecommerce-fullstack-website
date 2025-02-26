@@ -11,8 +11,8 @@ function LoginSignup() {
     const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
     const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
-    const userRef = useRef();
-    const pwdRef = useRef();
+    const userRef = useRef<HTMLInputElement>(null);
+    const pwdRef = useRef<HTMLInputElement>(null);
 
     const [user, setUser] = useState("");
     const [validName, setValidName] = useState(false);
@@ -30,7 +30,9 @@ function LoginSignup() {
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
-        userRef.current.focus();
+        if (userRef.current) {
+            userRef.current.focus();
+        }
     }, [])
 
     useEffect(() => {
